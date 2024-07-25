@@ -21,6 +21,21 @@ jobs:
         run: node index.js ${{ vars.GAMES }}
         env:
           COOKIE: ${{ secrets.COOKIE }}
-          COOKIE_AMU: ${{ secrets.COOKIE_AMU }}
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+jobs:
+  check-in:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check In
+        run: node index.js ${{ vars.GAMES }}
+        env:
+          COOKIE_AMU: ${{ secrets.COOKIE_AMU }}
           DISCORD_WEBHOOK_AMU: ${{ secrets.DISCORD_WEBHOOK_AMU }}
