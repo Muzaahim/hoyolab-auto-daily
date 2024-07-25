@@ -21,6 +21,6 @@ jobs:
         run: node index.js ${{ vars.GAMES }}
         env:
           COOKIE: ${{ secrets.COOKIE }}
-          COOKIE: ${{ secrets.COOKIE_AMU }}
+          COOKIE_AMU: ${{ secrets.COOKIE_AMU }}
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_AMU }}
+          DISCORD_WEBHOOK_AMU: ${{ secrets.DISCORD_WEBHOOK_AMU }}
